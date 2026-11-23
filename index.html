@@ -38,6 +38,30 @@ header{display:flex;justify-content:space-between;align-items:center;gap:16px;ma
 </defs>
 <rect width="1200" height="675" fill="url(#sky)"/>
 <circle cx="920" cy="185" r="145" fill="#ffe2a0" opacity=".75"/><circle cx="920" cy="185" r="185" fill="#ffb5d1" opacity=".28" filter="url(#glow)"/>
+<!-- Casa Branca e bandeira americana: contexto visual imediato do personagem -->
+<g id="white-house" transform="translate(690 205)">
+ <path d="M0 166H485V196H0Z" fill="#eee9df" stroke="#8f8990" stroke-width="4"/>
+ <path d="M20 90Q242 -8 465 90L448 108H36Z" fill="#f7f3e9" stroke="#a7a0a0" stroke-width="5"/>
+ <path d="M35 91H450V112H35Z" fill="#d8d3cc"/>
+ <path d="M65 112H420V167H65Z" fill="#f4f0e8" stroke="#c5bdb4" stroke-width="3"/>
+ <g fill="#fffdf6" stroke="#b8b0a8" stroke-width="3">
+  <path d="M88 110h27v57H88zM145 110h27v57h-27zM202 110h27v57h-27zM259 110h27v57h-27zM316 110h27v57h-27zM373 110h27v57h-27z"/>
+  <path d="M78 108h47v8H78zM135 108h47v8h-47zM192 108h47v8h-47zM249 108h47v8h-47zM306 108h47v8h-47zM363 108h47v8h-47z"/>
+ </g>
+ <path d="M42 166H444V181H42Z" fill="#e3ded6"/>
+ <g fill="#d8d2ca"><rect x="58" y="73" width="10" height="19"/><rect x="420" y="73" width="10" height="19"/></g>
+ <path d="M215 52h55v40h-55z" fill="#f8f4ec" stroke="#b7afa6" stroke-width="3"/>
+ <path d="M224 61h37v31h-37z" fill="#9cb7c5"/>
+ <path d="M238 62v30M224 76h37" stroke="#f7f3ea" stroke-width="3"/>
+</g>
+<!-- bandeira dos Estados Unidos -->
+<g id="us-flag" transform="translate(1015 42) rotate(7)">
+ <path d="M0 0Q55 12 112 0V76Q56 88 0 76Z" fill="#fff" stroke="#ddd" stroke-width="2"/>
+ <path d="M0 0Q55 12 112 0V11Q56 23 0 11ZM0 22Q56 34 112 22V33Q56 45 0 33ZM0 44Q56 56 112 44V55Q56 67 0 55ZM0 66Q56 78 112 66V76Q56 88 0 76Z" fill="#c92342"/>
+ <path d="M0 0Q28 6 49 6V43Q26 39 0 33Z" fill="#203d75"/>
+ <g fill="#fff"><circle cx="9" cy="10" r="2"/><circle cx="21" cy="13" r="2"/><circle cx="33" cy="15" r="2"/><circle cx="9" cy="23" r="2"/><circle cx="21" cy="26" r="2"/><circle cx="33" cy="28" r="2"/></g>
+ <path d="M-5 -7V99" stroke="#d6c7a8" stroke-width="5"/>
+</g>
 <!-- city skyline -->
 <path d="M0 385V270h65v115h38V225h70v160h36V300h62v85h35V245h82v140h44V290h70v95h42V220h76v165h40V280h72v105h40V250h82v135h35V300h78v85h44V230h80v155h40V285h72v100h50v290H0Z" fill="#211b45" opacity=".9"/>
 <g fill="#ffe2a0" opacity=".65"><path d="M124 247h8v12h-8zm22 0h8v12h-8zm22 0h8v12h-8zM355 267h8v12h-8zm22 0h8v12h-8zm22 0h8v12h-8zM725 240h8v12h-8zm22 0h8v12h-8zm22 0h8v12h-8zM1020 250h8v12h-8zm22 0h8v12h-8z"/></g>
@@ -61,14 +85,14 @@ header{display:flex;justify-content:space-between;align-items:center;gap:16px;ma
 <path d="M505 465L555 465L590 675H455Z" fill="#cf173d"/>
 <path d="M455 425L520 500L485 540L400 450Z" fill="#24385f"/><path d="M590 425L520 500L560 540L650 450Z" fill="#24385f"/>
 <!-- head and ears -->
-<ellipse cx="527" cy="295" rx="151" ry="174" fill="url(#skin)" stroke="#99583f" stroke-width="6" filter="url(#characterShadow)"/>
+<ellipse cx="527" cy="295" rx="151" ry="174" fill="#e9a36f" stroke="#99583f" stroke-width="6" filter="url(#characterShadow)"/>
 <ellipse cx="527" cy="295" rx="145" ry="168" fill="url(#faceLight)"/>
 <ellipse cx="379" cy="302" rx="27" ry="43" fill="url(#skin)" stroke="#a45d46" stroke-width="5"/><ellipse cx="675" cy="302" rx="27" ry="43" fill="url(#skin)" stroke="#a45d46" stroke-width="5"/>
 <ellipse cx="384" cy="302" rx="11" ry="21" fill="#bd7658" opacity=".65"/><ellipse cx="670" cy="302" rx="11" ry="21" fill="#bd7658" opacity=".65"/>
 <!-- hair cap -->
-<path d="M380 267Q348 120 475 105Q565 62 665 126Q716 165 680 257Q652 210 622 195Q548 228 462 195Q428 240 380 267Z" fill="url(#hair)" stroke="#a76c29" stroke-width="8" filter="url(#characterShadow)"/>
-<path d="M392 185Q430 70 566 95Q640 85 681 168Q625 128 581 150Q496 112 392 185Z" fill="#fff0b7"/>
-<g fill="none" stroke-linecap="round"><path d="M400 191Q450 99 565 119Q628 112 663 163" stroke="#fff8d8" stroke-width="13"/><path d="M391 220Q443 145 500 148Q563 116 631 155" stroke="#f8d77e" stroke-width="9"/><path d="M430 235Q473 181 530 178Q594 157 651 193" stroke="#c88a38" stroke-width="7" opacity=".7"/><path d="M480 119Q545 79 614 121" stroke="#fff9dc" stroke-width="7"/></g>
+<path d="M374 276Q350 163 410 113Q458 70 548 91Q635 57 684 133Q709 170 680 252Q659 216 635 196Q601 171 560 174Q497 190 451 218Q420 244 374 276Z" fill="url(#hair)" stroke="#a76c29" stroke-width="8" filter="url(#characterShadow)"/>
+<path d="M386 190Q407 85 532 82Q628 63 687 145Q642 118 594 131Q536 104 474 143Q431 160 386 190Z" fill="#fff0b7"/>
+<g fill="none" stroke-linecap="round"><path d="M388 184Q455 78 573 106Q641 98 681 157" stroke="#fff8d8" stroke-width="13"/><path d="M391 220Q443 145 500 148Q563 116 631 155" stroke="#f8d77e" stroke-width="9"/><path d="M430 235Q473 181 530 178Q594 157 651 193" stroke="#c88a38" stroke-width="7" opacity=".7"/><path d="M480 119Q545 79 614 121" stroke="#fff9dc" stroke-width="7"/></g>
 <!-- brows and expressive animated eyes -->
 <path d="M416 269q44-30 87-3M545 266q49-30 91 4" fill="none" stroke="#895039" stroke-width="15" stroke-linecap="round"/>
 <path d="M425 272q39-17 75-2M554 270q37-17 73 1" fill="none" stroke="#e9b27e" stroke-width="5" stroke-linecap="round"/>
@@ -89,7 +113,7 @@ header{display:flex;justify-content:space-between;align-items:center;gap:16px;ma
 <path d="M185 345Q198 365 220 355M206 326Q224 337 242 327" fill="none" stroke="#f9d0a5" stroke-width="7" stroke-linecap="round"/>
 <path d="M196 421Q254 475 333 478" fill="none" stroke="#f9d1a8" stroke-width="9" stroke-linecap="round" opacity=".7"/>
 <path d="M176 306l-82-50q-21-13-9-31q12-17 34-5l96 52M190 325l-98-20q-23-5-19-26q5-19 28-16l107 18" fill="none" stroke="#eab18a" stroke-width="20" stroke-linecap="round"/>
-<!-- dramatic caption -->
+<g transform="translate(642 542)"><path d="M0 0h27v18H0z" fill="#fff" stroke="#ddd" stroke-width="1"/><path d="M0 0h27v3H0zm0 6h27v3H0zm0 12h27v3H0z" fill="#c92342"/><path d="M0 0h12v9H0z" fill="#203d75"/><circle cx="3" cy="3" r="1" fill="#fff"/><circle cx="8" cy="5" r="1" fill="#fff"/></g>\n<!-- dramatic caption -->
 <text x="750" y="330" fill="#fff" stroke="#21113c" stroke-width="15" paint-order="stroke" font-family="Arial Black,Arial" font-size="102" font-weight="1000" letter-spacing="-5">JOGAR</text>
 <text x="748" y="445" fill="#ffe04e" stroke="#21113c" stroke-width="17" paint-order="stroke" font-family="Arial Black,Arial" font-size="145" font-weight="1000" letter-spacing="-7">GTA</text>
 <text x="760" y="490" fill="#fff" font-family="Arial Black,Arial" font-size="27" font-weight="900" letter-spacing="4">ATÉ O ÚLTIMO DÓLAR.</text>
