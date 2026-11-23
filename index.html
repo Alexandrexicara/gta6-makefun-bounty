@@ -27,12 +27,14 @@ header{display:flex;justify-content:space-between;align-items:center;gap:16px;ma
 <svg id="art" class="art" xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Meme de Donald Trump segurando dinheiro com a frase Jogar GTA">
 <defs>
  <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#25103f"/><stop offset=".48" stop-color="#ed5c9b"/><stop offset="1" stop-color="#ffbd62"/></linearGradient>
- <linearGradient id="jacket" x2="1" y2="1"><stop stop-color="#18274c"/><stop offset="1" stop-color="#080e26"/></linearGradient>
- <linearGradient id="skin" x2=".2" y2="1"><stop stop-color="#ffe0b2"/><stop offset="1" stop-color="#c97848"/></linearGradient>
- <linearGradient id="hair" x2="0" y2="1"><stop stop-color="#fff2b0"/><stop offset="1" stop-color="#d99b38"/></linearGradient>
- <linearGradient id="cash" x2="0" y2="1"><stop stop-color="#e6f1c5"/><stop offset="1" stop-color="#7fa879"/></linearGradient>
- <filter id="shadow"><feGaussianBlur stdDeviation="12"/></filter>
- <filter id="glow"><feGaussianBlur stdDeviation="20"/></filter>
+ <linearGradient id="jacket" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#405987"/><stop offset=".42" stop-color="#172b55"/><stop offset="1" stop-color="#070d25"/></linearGradient>
+ <linearGradient id="skin" x1=".12" y1="0" x2=".82" y2="1"><stop stop-color="#fff0d0"/><stop offset=".34" stop-color="#f5c18e"/><stop offset=".72" stop-color="#df9568"/><stop offset="1" stop-color="#a95743"/></linearGradient>
+ <linearGradient id="hair" x1=".15" y1="0" x2=".75" y2="1"><stop stop-color="#fff9d7"/><stop offset=".35" stop-color="#ffe7a0"/><stop offset=".72" stop-color="#e9b653"/><stop offset="1" stop-color="#b8782e"/></linearGradient>
+ <linearGradient id="cash" x2="0" y2="1"><stop stop-color="#f3f8d9"/><stop offset=".5" stop-color="#b7d1a1"/><stop offset="1" stop-color="#668c68"/></linearGradient>
+ <radialGradient id="faceLight" cx=".34" cy=".24" r=".82"><stop stop-color="#fff4d8" stop-opacity=".82"/><stop offset=".55" stop-color="#ffd5a4" stop-opacity=".12"/><stop offset="1" stop-color="#8d443b" stop-opacity=".42"/></radialGradient>
+ <linearGradient id="coatLight" x2="0" y2="1"><stop stop-color="#7189b2" stop-opacity=".5"/><stop offset="1" stop-color="#101a3c" stop-opacity="0"/></linearGradient>
+ <filter id="shadow"><feGaussianBlur stdDeviation="12"/></filter><filter id="glow"><feGaussianBlur stdDeviation="20"/></filter>
+ <filter id="characterShadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/><feOffset dy="9" result="offset"/><feComponentTransfer in="offset"><feFuncA type="linear" slope=".38"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs>
 <rect width="1200" height="675" fill="url(#sky)"/>
 <circle cx="920" cy="185" r="145" fill="#ffe2a0" opacity=".75"/><circle cx="920" cy="185" r="185" fill="#ffb5d1" opacity=".28" filter="url(#glow)"/>
@@ -52,28 +54,40 @@ header{display:flex;justify-content:space-between;align-items:center;gap:16px;ma
  <g fill="#345c40" font-family="Georgia" font-weight="bold" font-size="27"><text x="35" y="78" transform="rotate(-28 35 78)">$100</text><text x="95" y="66" transform="rotate(-10 95 66)">$100</text><text x="165" y="62">$100</text></g>
 </g>
 <!-- Trump caricature torso -->
-<path d="M280 675Q285 535 350 465Q420 420 520 425Q650 410 730 475Q795 540 815 675Z" fill="url(#jacket)"/>
+<path d="M280 675Q285 535 350 465Q420 420 520 425Q650 410 730 475Q795 540 815 675Z" fill="url(#jacket)" stroke="#080e25" stroke-width="8" filter="url(#characterShadow)"/>
+<path d="M315 675Q330 535 390 480Q450 445 520 447Q650 438 710 493Q760 555 780 675Z" fill="url(#coatLight)" opacity=".8"/>
+<path d="M350 500Q390 470 430 465M690 470Q735 500 755 550" fill="none" stroke="#8fa6cf" stroke-opacity=".35" stroke-width="8" stroke-linecap="round"/>
 <path d="M430 435L520 510L595 435L645 675H365Z" fill="#f4f2ed"/>
 <path d="M505 465L555 465L590 675H455Z" fill="#cf173d"/>
 <path d="M455 425L520 500L485 540L400 450Z" fill="#24385f"/><path d="M590 425L520 500L560 540L650 450Z" fill="#24385f"/>
 <!-- head and ears -->
-<ellipse cx="527" cy="295" rx="151" ry="174" fill="url(#skin)" stroke="#8c4c3c" stroke-width="5"/>
-<ellipse cx="379" cy="302" rx="26" ry="42" fill="#d99268"/><ellipse cx="675" cy="302" rx="26" ry="42" fill="#d99268"/>
+<ellipse cx="527" cy="295" rx="151" ry="174" fill="url(#skin)" stroke="#99583f" stroke-width="6" filter="url(#characterShadow)"/>
+<ellipse cx="527" cy="295" rx="145" ry="168" fill="url(#faceLight)"/>
+<ellipse cx="379" cy="302" rx="27" ry="43" fill="url(#skin)" stroke="#a45d46" stroke-width="5"/><ellipse cx="675" cy="302" rx="27" ry="43" fill="url(#skin)" stroke="#a45d46" stroke-width="5"/>
+<ellipse cx="384" cy="302" rx="11" ry="21" fill="#bd7658" opacity=".65"/><ellipse cx="670" cy="302" rx="11" ry="21" fill="#bd7658" opacity=".65"/>
 <!-- hair cap -->
-<path d="M380 267Q348 120 475 105Q565 62 665 126Q716 165 680 257Q652 210 622 195Q548 228 462 195Q428 240 380 267Z" fill="url(#hair)" stroke="#a76c29" stroke-width="7"/>
-<path d="M392 185Q430 70 566 95Q640 85 681 168Q625 128 581 150Q496 112 392 185Z" fill="#ffe9a1"/>
-<!-- brows and eyes -->
-<path d="M423 272q42-27 81 0M550 271q45-28 84 1" fill="none" stroke="#9a603e" stroke-width="13" stroke-linecap="round"/>
-<ellipse cx="467" cy="292" rx="16" ry="10" fill="#fff"/><ellipse cx="590" cy="292" rx="16" ry="10" fill="#fff"/><circle cx="470" cy="292" r="6" fill="#273047"/><circle cx="590" cy="292" r="6" fill="#273047"/>
-<!-- nose, cheeks, mouth -->
-<path d="M526 293q-8 54-29 72q26 20 57 0" fill="none" stroke="#a95f45" stroke-width="9" stroke-linecap="round"/>
-<path d="M432 355q40 22 73 2M552 357q40 20 78-3" fill="none" stroke="#c46e51" stroke-width="8" stroke-linecap="round"/>
-<path d="M474 400q54 30 111-2" fill="none" stroke="#8b3d39" stroke-width="10" stroke-linecap="round"/>
+<path d="M380 267Q348 120 475 105Q565 62 665 126Q716 165 680 257Q652 210 622 195Q548 228 462 195Q428 240 380 267Z" fill="url(#hair)" stroke="#a76c29" stroke-width="8" filter="url(#characterShadow)"/>
+<path d="M392 185Q430 70 566 95Q640 85 681 168Q625 128 581 150Q496 112 392 185Z" fill="#fff0b7"/>
+<g fill="none" stroke-linecap="round"><path d="M400 191Q450 99 565 119Q628 112 663 163" stroke="#fff8d8" stroke-width="13"/><path d="M391 220Q443 145 500 148Q563 116 631 155" stroke="#f8d77e" stroke-width="9"/><path d="M430 235Q473 181 530 178Q594 157 651 193" stroke="#c88a38" stroke-width="7" opacity=".7"/><path d="M480 119Q545 79 614 121" stroke="#fff9dc" stroke-width="7"/></g>
+<!-- brows and expressive animated eyes -->
+<path d="M416 269q44-30 87-3M545 266q49-30 91 4" fill="none" stroke="#895039" stroke-width="15" stroke-linecap="round"/>
+<path d="M425 272q39-17 75-2M554 270q37-17 73 1" fill="none" stroke="#e9b27e" stroke-width="5" stroke-linecap="round"/>
+<ellipse cx="467" cy="294" rx="20" ry="14" fill="#fffdf5"/><ellipse cx="590" cy="294" rx="20" ry="14" fill="#fffdf5"/>
+<ellipse cx="467" cy="295" rx="9" ry="11" fill="#5a786e"/><ellipse cx="590" cy="295" rx="9" ry="11" fill="#5a786e"/>
+<circle cx="469" cy="295" r="5" fill="#17263a"/><circle cx="592" cy="295" r="5" fill="#17263a"/><circle cx="472" cy="291" r="3" fill="#fff"/><circle cx="595" cy="291" r="3" fill="#fff"/>
+<!-- nose, cheeks and smile -->
+<path d="M526 292q-7 51-29 75q23 18 54 0q-13-9-14-19" fill="none" stroke="#a45b43" stroke-width="9" stroke-linecap="round"/>
+<path d="M511 365q15 8 30 0" fill="none" stroke="#f8d1a2" stroke-width="5" stroke-linecap="round"/>
+<ellipse cx="438" cy="350" rx="29" ry="17" fill="#e98e78" opacity=".28"/><ellipse cx="615" cy="350" rx="29" ry="17" fill="#e98e78" opacity=".28"/>
+<path d="M475 398q51 34 108-1q-52 13-108 1Z" fill="#873d3c"/><path d="M487 398q42 13 82 0" fill="none" stroke="#ffe6ce" stroke-width="5" stroke-linecap="round"/>
+<path d="M463 420q59 20 126-1" fill="none" stroke="#a95b48" stroke-width="5" opacity=".65"/>
 <!-- neck -->
 <path d="M472 425l4-54h102l9 56q-52 45-115-2" fill="url(#skin)"/>
 <!-- arm and hand holding cash -->
-<path d="M300 520Q225 478 180 420Q142 376 160 338Q183 302 220 330L335 420Q382 446 405 490Z" fill="url(#skin)" stroke="#9a5945" stroke-width="7"/>
-<path d="M170 343Q148 306 171 280Q193 257 218 281L250 312Q270 327 249 350L220 375Q192 390 170 343Z" fill="url(#skin)" stroke="#9a5945" stroke-width="6"/>
+<path d="M300 520Q225 478 180 420Q142 376 160 338Q183 302 220 330L335 420Q382 446 405 490Z" fill="url(#skin)" stroke="#9a5945" stroke-width="8" filter="url(#characterShadow)"/>
+<path d="M170 343Q148 306 171 280Q193 257 218 281L250 312Q270 327 249 350L220 375Q192 390 170 343Z" fill="url(#skin)" stroke="#9a5945" stroke-width="7"/>
+<path d="M185 345Q198 365 220 355M206 326Q224 337 242 327" fill="none" stroke="#f9d0a5" stroke-width="7" stroke-linecap="round"/>
+<path d="M196 421Q254 475 333 478" fill="none" stroke="#f9d1a8" stroke-width="9" stroke-linecap="round" opacity=".7"/>
 <path d="M176 306l-82-50q-21-13-9-31q12-17 34-5l96 52M190 325l-98-20q-23-5-19-26q5-19 28-16l107 18" fill="none" stroke="#eab18a" stroke-width="20" stroke-linecap="round"/>
 <!-- dramatic caption -->
 <text x="750" y="330" fill="#fff" stroke="#21113c" stroke-width="15" paint-order="stroke" font-family="Arial Black,Arial" font-size="102" font-weight="1000" letter-spacing="-5">JOGAR</text>
